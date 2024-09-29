@@ -11,26 +11,25 @@
 <body>
 
     <header>
-        <div class="picture">
-            <a href="https://portafolio-tomas-lona.netlify.app/" target="_blank"><img src="img/tommy.jpeg" alt="" class="logo"></a>
-        </div>
+        <div class="picture" style="display: flex; ">
+            <img src="img/logo2.png" alt="" class="logo" style='width: 13rem;'>
+            <div>
+                <h4>Cotizador de Criptomonedas</h4>
+            </div>
 
-        <div class="titulo">
-            <h4>Cotizador de Criptomoneda$</h4>
-        </div>
-        
+        </div>      
     </header>
+    
 
 
     <div class="container">
-
-
         <div class="row">
             <div class="one-half column">
-                <img src="img/cryptomonedas.png">
+                <img class="bigCoint" src="img/logobitcoin.png" id="coinImage">
             </div>
+            
             <div class="one-half column">
-                <form id="formulario">
+                <form class="criptomoneda-container" id="formulario">
                     <div class="row">
                         <label>Elige tu Moneda</label>
                         <select
@@ -49,38 +48,58 @@
                         </select>
                     </div>
 
-                    <div class="row">
-                    <div>
-                        <label>Elige tu Criptomoneda</label>
-                        <select 
-                            class="u-full-width"
-                            id="criptomonedas"
-                            name="criptomoneda"
-                        >
-                            <option value="" disabled selected>Elige tu criptomoneda</option>
-                        </select>
-                    </div>
+                    <div  class="row">
+                        <div >
+                            <label>Elige tu Criptomoneda</label>
+                            <select 
+                                class="u-full-width"
+                                id="criptomonedas"
+                                name="criptomoneda"
+                            >
+                                <option value="" disabled selected>Elige tu criptomoneda</option>
+                            </select>
+                        </div>
+                        
                     </div>
                     <input class="button-primary u-full-width" type="submit" value="Cotizar" />
 
-                    <div id="resultado" class="resultado"></div>
                 </form>
+
+                
+                <div id="myModal" class="modal">
+                    <div class="modal-content"> 
+                      <span class="close">&times;</span>
+                      <div class="columnContent">
+                        <div id="resultado" class="resultado"></div>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>    
+
+    <div class="chart-container">
+        <div id="cryptoChart"></div>
     </div>
 
-    <footer>
-        <div class="picture">
-            <a href="https://portafolio-tomas-lona.netlify.app/" target="_blank"><img src="img/tommy.jpeg" alt="" class="logo"></a>  
-        </div>
 
-        <div class="titulo">
-            <h4>Cotizador de Criptomoneda$</h4>
-        </div>
+    
+
+    <footer class="portfolio-label">
+        <div >
+            <a href="https://portafolio-tomas-lona.netlify.app/" target="_blank">
+                <p>Este sitio pertenece a mi Portafolio. Dando click puedes ver mas proyectos</p>
+                <img src="img/tommy.png" alt="" class="logoTommy">
+            </a>
+         </div>  
         
     </footer>
 
     <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+
+
     
 </body>
 </html>
